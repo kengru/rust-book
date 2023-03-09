@@ -1,4 +1,4 @@
-# Chapter 02
+# Guessing game
 
 ## Things learned
 
