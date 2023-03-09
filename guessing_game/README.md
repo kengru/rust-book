@@ -21,4 +21,4 @@
 
 ## Thoughts
 
-- I really need to learn vim. Will be forcing myself to do it.
+- I really need to learn vim. Will be forcing myself to do it. (wont)
