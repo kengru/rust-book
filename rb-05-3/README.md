@@ -12,3 +12,9 @@
   instance after the transformation."_
 - It is possible to write a method that it's called like a
   field.
+- Always remember that if a function is just going to read the
+  values of something like a struct, it's better to do an
+  immutable borrow of the value. `&rect1` for example.
+- All functions defined within an `impl` block are _associated
+  functions_
+- `impl` can be called inside the main function (why?).
