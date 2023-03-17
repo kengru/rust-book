@@ -11,3 +11,6 @@
   putting that line above the struct definition, like a decorator)
   makes us able to print the data of the instanciated struct in a
   println! by using `{:?}`.
+- `dbg!` is another macro that works as a printer but in the standard
+  error console stream. It works great because it does not take
+  ownership away from the variable and it does return the result.
