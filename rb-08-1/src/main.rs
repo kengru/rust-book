@@ -5,8 +5,14 @@ fn main() {
     v.push(4);
     v.push(2);
 
-    let second = &v[1];
-    let third = v[2];
+    // let second = &v[1];
+    // let third = v[2];
 
-    println!("{} {}", second, third);
+    for n in &mut v {
+        // let plus_one = *n + 1;
+        *n += 12;
+        println!("{n}");
+    }
+
+    // println!("{} {}", second, third);
 }

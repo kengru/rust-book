@@ -17,3 +17,8 @@
   but get will actually just return a `Option<T>`, which can
   be then catched inside a `match` pattern matching, in case
   it is out of bound, it will just return None.
+- Vectors can be iterated with a `for` `in` loop. They can
+  be iterated with the values being mutable or immutable
+  references.
+- We can store diferent enum values in a vector because an
+  enum's values count as one type.
