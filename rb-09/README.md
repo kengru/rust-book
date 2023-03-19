@@ -58,3 +58,8 @@ fn last_char_of_first_line(text: &str) -> Option<char> {
 - When a main function returns a `Result<(), E>`, the executable will
   exit with a value of 0 if main returns `Ok(())` and will exit with a
   nonzero value if main returns an `Err` value.
+- "When your code performs an operation that could put a user at risk if it’s
+  called using invalid values, your code should verify the values are valid
+  first and panic if the values aren’t valid. This is mostly for safety
+  reasons: attempting to operate on invalid data can expose your code to
+  vulnerabilities."
