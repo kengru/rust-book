@@ -13,3 +13,25 @@
   of the trait function you are implementing then
   you need to add it when adding it to a struct.
   If you do, then it acts like a default implementation.
+- You can create a function where the parameters that it takes
+  is of type "something that implements a trait". Examples:
+
+```rust
+pub fn notify(item: &impl Summary) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+and
+
+```rust
+pub fn notify<T: Summary>(item: &T) {
+    println!("Breaking news! {}", item.summarize());
+}
+```
+
+- `pub fn notify(item: &(impl Summary + Display))` is a
+  case where we want the `item` value to implement both
+  Summary and Display.
+- _"Traits and trait bounds ensure that even though the
+  types are generic, they’ll have the behavior the code needs."_
