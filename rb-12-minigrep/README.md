@@ -15,3 +15,17 @@
   closure to the parameters of the function and handle the error within
   the closure's scope, probably ejecting the programm with an exit code
   other than 0.
+- This is a way of doing something when returning an error or an empty
+  value from a function:
+
+```rust
+if let Err(e) = run(config) {
+    println!("Application error: {e}");
+    process::exit(1);
+}
+```
+
+- Remember to add the `pub` keyword when separating functions into different
+  files so they can be used in other parts of the program.
+- _"Notice that we need to define an explicit lifetime 'a in the signature of search and use that lifetime with the contents argument and the return value. Recall in Chapter 10 that the lifetime parameters specify which argument lifetime is connected to the lifetime of the return value. In this case, we indicate that the returned vector should contain string slices that reference slices of the argument contents (rather than the argument query).
+  In other words, we tell Rust that the data returned by the search function will live as long as the data passed into the search function in the contents argument. This is important! The data referenced by a slice needs to be valid for the reference to be valid; if the compiler assumes we’re making string slices of query rather than contents, it will do its safety checking incorrectly."_
