@@ -1,4 +1,4 @@
-# rb-13-1 Iterators.
+# rb-13-2 Iterators.
 
 ## Things learned
 
