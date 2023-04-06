@@ -1,5 +1,5 @@
 #[derive(Debug)]
-struct Rectangle {
+pub struct Rectangle {
     width: u32,
     height: u32,
 }
@@ -12,6 +12,17 @@ impl Rectangle {
 
 pub fn add(left: usize, right: usize) -> usize {
     left + right
+}
+
+pub fn area_if_holds(rec: &Rectangle) -> u32 {
+    let holded = Rectangle {
+        width: 2,
+        height: 3,
+    };
+    if rec.can_hold(&holded) {
+        return rec.width + rec.height;
+    }
+    0
 }
 
 #[cfg(test)]
