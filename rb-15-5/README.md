@@ -2,13 +2,14 @@
 
 ## Things learned
 
-- `Rc` stands for reference counting. The `Rc<T>` type keeps track
-  of the number of references to a value to determine whether or not the
-  value is still in use.
-- We use the `Rc<T>` type when we want to allocate some data on the heap
-  for multiple parts of our program to read and we can’t determine at
-  compile time which part will finish using the data last.
-- In terms of performance the `Rc::clone()` is not the same as a regular
-  copy of data, in this case it only increments the reference counts to
-  that data.
-- `Rc::strong_count()` counts all the reference to the specified data.
+- `unsafe` is a word ment for code that is not going to be checked
+  by the compiler, but in runtime.
+
+Here is a recap of the reasons to choose Box<T>, Rc<T>, or RefCell<T>:
+
+- `Rc<T>` enables multiple owners of the same data; Box<T> and RefCell<T> have single owners.
+- `Box<T>` allows immutable or mutable borrows checked at compile time; Rc<T> allows
+  only immutable borrows checked at compile time; RefCell<T> allows immutable or mutable
+  borrows checked at runtime.
+- Because `RefCell<T>` allows mutable borrows checked at runtime, you can mutate the
+  value inside the RefCell<T> even when the RefCell<T> is immutable.
