@@ -1,4 +1,4 @@
-# rb-13-2 Deref trait.
+# rb-15-2 Deref trait.
 
 ## Things learned
 

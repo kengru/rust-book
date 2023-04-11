@@ -1,4 +1,4 @@
-# rb-13-3 Drop trait.
+# rb-15-3 Drop trait.
 
 ## Things learned
 
