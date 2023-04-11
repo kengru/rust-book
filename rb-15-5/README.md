@@ -13,3 +13,9 @@ Here is a recap of the reasons to choose Box<T>, Rc<T>, or RefCell<T>:
   borrows checked at runtime.
 - Because `RefCell<T>` allows mutable borrows checked at runtime, you can mutate the
   value inside the RefCell<T> even when the RefCell<T> is immutable.
+- When using a `usize` number, it looks like it's normally casted into a float with `as`.
+- When defining an implementation of an struct, the `where` clause can be used to express
+  that the `T` type should implement `x` trait.
+- What can be done with `RefCell` is circunvent a condition where a trait uses needs an
+  inmutable reference but we need to mutate some state in an implementation. We can use
+  `RefCell` to borrow mutate the field we need to change.
