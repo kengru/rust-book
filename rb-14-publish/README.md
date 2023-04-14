@@ -13,7 +13,7 @@
 - Things to document about functions/library when creating a
   public API: Examples, Panics, Errors and Safety.
 - `//!` are used to describe the crate.
-- Any example written in the documentation will cound as a test
+- Any example written in the documentation will count as a test
   when running `cargo test`.
 - Crate versions cannot be overwritten. In case of an error just
   public a new version and `yank` the old one.
