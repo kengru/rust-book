@@ -1,3 +1,4 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "rust-analyzer.linkedProjects": ["./rb-17-3/Cargo.toml"]
 }
