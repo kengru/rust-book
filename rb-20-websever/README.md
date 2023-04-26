@@ -10,3 +10,4 @@
   \n is a line feed. The CRLF sequence separates the request line from the rest of
   the request data. Note that when the CRLF is printed, we see a new line start rather
   than \r\n.
+- You can assign values with a let to the result of an if statement.
