@@ -11,3 +11,7 @@
   the request data. Note that when the CRLF is printed, we see a new line start rather
   than \r\n.
 - You can assign values with a let to the result of an if statement.
+- `Vec.with_capacity()` preallocates space in the vector.
+- For simplicity’s sake, this behavior is fine, but in a production thread pool
+  implementation, you’d likely want to use std::thread::Builder and its spawn method
+  that returns Result instead.
